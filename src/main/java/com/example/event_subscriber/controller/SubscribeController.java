@@ -26,8 +26,8 @@ public class SubscribeController {
         return subscribeService.createASubscription(eventSubDto.getEmail(), eventSubDto.getEventId());
     }
 
-    @DeleteMapping("/{email}&{sub_id}")
-    public ResponseEntity<?> deleteSubscription(@PathVariable String email, @PathVariable Long sub_id) {
-        return subscribeService.deleteSubscription(email, sub_id);
+    @DeleteMapping("/{email}&{event_id}")
+    public ResponseEntity<?> deleteSubscription(@PathVariable String email, @PathVariable Long event_id) {
+        return subscribeService.deleteSubscription(email, event_id);
     }
 }
